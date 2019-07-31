@@ -15,7 +15,7 @@ import java.util.stream.Collectors;
 
 public class InformeDiarioGateway implements InformeDiarioBoundary {
 
-    public static final int HEADER_LINE = 1;
+    private static final int HEADER_LINE = 1;
 
     @Override
     public List<InformeDiario> getAll() {
