@@ -5,11 +5,8 @@ import com.ciandt.investment.dataprovider.InformeDiarioGateway;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-import org.springframework.context.annotation.Bean;
 
 import java.util.List;
-
-import static org.junit.Assert.*;
 
 public class ObterCaptacaoLiquidaUseCaseTest {
 
@@ -28,6 +25,5 @@ public class ObterCaptacaoLiquidaUseCaseTest {
         List<InformeDiario> all = informeDiarioBoundary.getAll();
         Assert.assertEquals(325850, all.size());
     }
-
 
 }

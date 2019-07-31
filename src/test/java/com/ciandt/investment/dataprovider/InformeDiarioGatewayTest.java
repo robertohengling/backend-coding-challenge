@@ -9,16 +9,12 @@ import static org.junit.Assert.assertEquals;
 
 public class InformeDiarioGatewayTest {
 
-
     @Test
     public void sanity() {
 
         InformeDiarioGateway informeDiarioGateway = new InformeDiarioGateway();
         List<InformeDiario> informeDiarios = informeDiarioGateway.getAll();
-
         assertEquals(325850, informeDiarios.size());
 
     }
-
-
 }
