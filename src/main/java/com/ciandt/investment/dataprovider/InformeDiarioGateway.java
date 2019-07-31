@@ -15,6 +15,8 @@ import java.util.stream.Collectors;
 
 public class InformeDiarioGateway implements InformeDiarioBoundary {
 
+    public static final int HEADER_LINE = 1;
+
     @Override
     public List<InformeDiario> getAll() {
 
@@ -26,7 +28,7 @@ public class InformeDiarioGateway implements InformeDiarioBoundary {
             try (BufferedReader dataset = new BufferedReader(reader)) {
                 return dataset
                         .lines()
-                        .skip(1)
+                        .skip(HEADER_LINE)
                         .map(InformeDiario::new)
                         .collect(Collectors.toList());
             }
