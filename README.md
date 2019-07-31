@@ -2,12 +2,6 @@
 
 Bem vindo! Se você está aqui é porque gostamos do seu perfil e queremos conhecer um pouco mais sobre suas habilidades como desenvolvedor.
 
-## Submissão
-
-Utilize **Git** para versionamento do seu projeto. Faça um FORK e submeta um PULL REQUEST para este repositório com a sua solução.
-
-Atenção: Não criar um repositório público com o conteúdo do desafio ou solução.
-
 ## Critérios de avaliação
 
 * Compreensão dos requistos
@@ -19,17 +13,6 @@ Atenção: Não criar um repositório público com o conteúdo do desafio ou sol
 * Separação de Responsabilidades
 * Manutenabilidade
 * Modelagem de dados (Estruturas de dados utilizadas, banco de dados, etc)
-
-## Diferenciais
-
-* Utilizar Docker e docker-compose.
-* API utilizando JSON API (REST).
-* Disponibilizar um README com possíveis evoluções na sua solução. Tendo em vista o prazo proposto. 
-
-## Considerações finais
-
-* Sinta-se livre para entrar em contato conosco sempre que necessário!
-
 
 # Desafio
 
