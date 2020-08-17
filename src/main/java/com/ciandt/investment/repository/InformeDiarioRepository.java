@@ -3,11 +3,13 @@ package com.ciandt.investment.repository;
 import com.ciandt.investment.core.domain.EMes;
 import com.ciandt.investment.core.domain.InformeDiario;
 import com.ciandt.investment.core.domain.InformeDiarioBuilder;
+import org.springframework.stereotype.Repository;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
+@Repository
 public class InformeDiarioRepository implements IInformeDiarioRepository {
     @Override
     public List<InformeDiario> finadAllByMes(EMes mes) {

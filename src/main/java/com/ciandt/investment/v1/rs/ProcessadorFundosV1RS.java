@@ -1,12 +1,13 @@
 package com.ciandt.investment.v1.rs;
 
 import com.ciandt.investment.service.IProcessadorFundosService;
+import com.ciandt.investment.v1.rs.request.PostAnalisarFundosInvestimentoRequestDTO;
 import com.ciandt.investment.v1.rs.response.PostAnalisarFundosInvestimentoResponseDTO;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
@@ -21,9 +22,11 @@ public class ProcessadorFundosV1RS {
         this.processadorFundosService = processadorFundosService;
     }
 
-    @RequestMapping(value = "/analiseMensal/{mes}", method = {RequestMethod.POST})
-    public ResponseEntity<List<PostAnalisarFundosInvestimentoResponseDTO>>  analisarFundosInvestimento(@RequestParam final String mes){
-        List<PostAnalisarFundosInvestimentoResponseDTO> responseDTO = processadorFundosService.processarAnaliseMensal(mes);
+    @RequestMapping(value = "/analiseMensal", method = {RequestMethod.POST})
+    public ResponseEntity<List<PostAnalisarFundosInvestimentoResponseDTO>>  analisarFundosInvestimento(
+            @RequestBody final PostAnalisarFundosInvestimentoRequestDTO requestBodyDTO){
+        List<PostAnalisarFundosInvestimentoResponseDTO> responseDTO = processadorFundosService
+                .processarAnaliseMensal(requestBodyDTO.getMes());
         return new ResponseEntity<>(responseDTO, HttpStatus.OK);
     }
 
