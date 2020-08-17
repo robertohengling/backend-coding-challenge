@@ -39,6 +39,17 @@ public class InformeDiario {
         this.numeroCotistas = new Integer(line[NR_COTST]);
     }
 
+    public InformeDiario(String cnpj, String dataCompetencia, BigDecimal valorTotal, BigDecimal valorCota, BigDecimal valorPatrimonioLiquido, BigDecimal captacaoDia, BigDecimal resgateDia, Integer numeroCotistas) {
+        this.cnpj = cnpj;
+        this.dataCompetencia = dataCompetencia;
+        this.valorTotal = valorTotal;
+        this.valorCota = valorCota;
+        this.valorPatrimonioLiquido = valorPatrimonioLiquido;
+        this.captacaoDia = captacaoDia;
+        this.resgateDia = resgateDia;
+        this.numeroCotistas = numeroCotistas;
+    }
+
     public String getCnpj() {
         return cnpj;
     }
