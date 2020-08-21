@@ -39,6 +39,12 @@ public class InformeDiario {
         this.numeroCotistas = new Integer(line[NR_COTST]);
     }
 
+    public InformeDiario(String cnpj, BigDecimal captacaoDia, BigDecimal resgateDia) {
+        this.cnpj = cnpj;
+        this.captacaoDia = captacaoDia;
+        this.resgateDia = resgateDia;
+    }
+
     public String getCnpj() {
         return cnpj;
     }

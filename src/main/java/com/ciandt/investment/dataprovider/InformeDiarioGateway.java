@@ -2,6 +2,7 @@ package com.ciandt.investment.dataprovider;
 
 import com.ciandt.investment.core.domain.InformeDiario;
 import com.ciandt.investment.core.usecase.InformeDiarioBoundary;
+import org.springframework.stereotype.Component;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -13,6 +14,7 @@ import java.nio.file.Paths;
 import java.util.List;
 import java.util.stream.Collectors;
 
+@Component
 public class InformeDiarioGateway implements InformeDiarioBoundary {
 
     private static final int HEADER_LINE = 1;
